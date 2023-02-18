@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     //MARK: - Public and Static variables
     var questionNumber = 0
     var allOptions: [String] = []
-    
+    var questionDataJSON = JSON()
     
     //MARK: - Instances
     var questionData = QuestionData()
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         if questionNumber > 9 {
             return
         }
-        getQuestionData()
+        updateQuestionData()
     }
 }
 
@@ -47,25 +47,24 @@ extension ViewController {
         AF.request(questionUrl, method: .get).responseJSON { response in
             switch response.result {
             case .success(let safeResult):
-                let questionData: JSON = JSON(safeResult)
-                self.updateQuestionData(json: questionData)
+                self.questionDataJSON = JSON(safeResult)
+                self.updateQuestionData()
             case.failure(let error):
                 print(error)
             }
         }
     }
     
-    func updateQuestionData(json: JSON) {
-        
+    func updateQuestionData() {
         var question: String = ""
         var correctAnswer: String = ""
         
-        question = json["results"][questionNumber]["question"].stringValue
-        correctAnswer = json["results"][questionNumber]["correct_answer"].stringValue
+        question = questionDataJSON["results"][questionNumber]["question"].stringValue
+        correctAnswer = questionDataJSON["results"][questionNumber]["correct_answer"].stringValue
         allOptions.append(correctAnswer)
         
         for j in 0...2 {
-            let option = json["results"][questionNumber]["incorrect_answers"][j].stringValue
+            let option = questionDataJSON["results"][questionNumber]["incorrect_answers"][j].stringValue
             allOptions.append(option)
         }
         
