@@ -3,24 +3,21 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
-    //MARK: -Outlets
+    //MARK: - Outlets
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var optionsTableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
     
     
-    //MARK: -Public and Static variables
+    //MARK: - Public and Static variables
     var questionNumber = 0
     var allOptions: [String] = []
-    var question: String = ""
-    var correctAnswer: String = ""
     
     
-    //MARK: -Instances
+    //MARK: - Instances
     var questionData = QuestionData()
     
     let questionUrl = "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple"
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +29,7 @@ class ViewController: UIViewController {
         
     }
     
-    //MARK: -Actions
+    //MARK: - Actions
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         allOptions = []
         
@@ -44,28 +41,24 @@ class ViewController: UIViewController {
     }
 }
 
-//MARK: -Networking
+//MARK: - Networking
 extension ViewController {
-    
     func getQuestionData() {
         AF.request(questionUrl, method: .get).responseJSON { response in
-            
             switch response.result {
             case .success(let safeResult):
-                print(safeResult)
                 let questionData: JSON = JSON(safeResult)
-                print(questionData)
                 self.updateQuestionData(json: questionData)
-                
             case.failure(let error):
                 print(error)
             }
         }
-        
     }
     
-    
     func updateQuestionData(json: JSON) {
+        
+        var question: String = ""
+        var correctAnswer: String = ""
         
         question = json["results"][questionNumber]["question"].stringValue
         correctAnswer = json["results"][questionNumber]["correct_answer"].stringValue
@@ -77,19 +70,18 @@ extension ViewController {
         }
         
         optionsTableView.reloadData()
-        updateUI(question: question, correctAnswer: correctAnswer)
+        updateUI(question: question)
         
     }
 
-    
-    func updateUI(question: String, correctAnswer: String) {
+    //MARK: - Update UI
+    func updateUI(question: String) {
         questionLabel.text = question
-        
     }
     
 }
 
-//MARK: -TableView
+//MARK: - TableView
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allOptions.count
@@ -104,7 +96,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setOption(option: option)
         return cell
     }
-
 
 }
 
