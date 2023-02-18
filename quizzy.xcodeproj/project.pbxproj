@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4526081BA72BA45670CDDB03 /* Pods_quizzy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D0DFD907540612F89E95DC /* Pods_quizzy.framework */; };
+		CC40FE2B29A1560200E6E7CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC40FE2A29A1560200E6E7CC /* AppDelegate.swift */; };
+		CC40FE2D29A1560200E6E7CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC40FE2C29A1560200E6E7CC /* SceneDelegate.swift */; };
+		CC40FE2F29A1560200E6E7CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC40FE2E29A1560200E6E7CC /* ViewController.swift */; };
+		CC40FE3229A1560200E6E7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC40FE3029A1560200E6E7CC /* Main.storyboard */; };
+		CC40FE3429A1560400E6E7CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC40FE3329A1560400E6E7CC /* Assets.xcassets */; };
+		CC40FE3729A1560400E6E7CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC40FE3529A1560400E6E7CC /* LaunchScreen.storyboard */; };
+		CC40FE3F29A1578900E6E7CC /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC40FE3E29A1578900E6E7CC /* QuestionData.swift */; };
+		CC4CC65829A15BF2006ECDD9 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CC65729A15BF2006ECDD9 /* QuestionModel.swift */; };
+		CC4CC65E29A1645F006ECDD9 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CC65D29A1645F006ECDD9 /* OptionCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		61D0DFD907540612F89E95DC /* Pods_quizzy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quizzy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		808FF90882A1A995FE7F509E /* Pods-quizzy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzy.release.xcconfig"; path = "Target Support Files/Pods-quizzy/Pods-quizzy.release.xcconfig"; sourceTree = "<group>"; };
+		AD6DA40CBA7C88B3206FD7E1 /* Pods-quizzy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzy.debug.xcconfig"; path = "Target Support Files/Pods-quizzy/Pods-quizzy.debug.xcconfig"; sourceTree = "<group>"; };
+		CC40FE2729A1560200E6E7CC /* quizzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC40FE2A29A1560200E6E7CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC40FE2C29A1560200E6E7CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CC40FE2E29A1560200E6E7CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC40FE3129A1560200E6E7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC40FE3329A1560400E6E7CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC40FE3629A1560400E6E7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC40FE3829A1560400E6E7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC40FE3E29A1578900E6E7CC /* QuestionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		CC4CC65729A15BF2006ECDD9 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		CC4CC65D29A1645F006ECDD9 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC40FE2429A1560200E6E7CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4526081BA72BA45670CDDB03 /* Pods_quizzy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D2A7F5033B5D752EABB93BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD6DA40CBA7C88B3206FD7E1 /* Pods-quizzy.debug.xcconfig */,
+				808FF90882A1A995FE7F509E /* Pods-quizzy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CC40FE1E29A1560200E6E7CC = {
+			isa = PBXGroup;
+			children = (
+				CC40FE2929A1560200E6E7CC /* quizzy */,
+				CC40FE2829A1560200E6E7CC /* Products */,
+				2D2A7F5033B5D752EABB93BC /* Pods */,
+				D108A5CA25248452B1310375 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CC40FE2829A1560200E6E7CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC40FE2729A1560200E6E7CC /* quizzy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC40FE2929A1560200E6E7CC /* quizzy */ = {
+			isa = PBXGroup;
+			children = (
+				CC40FE2A29A1560200E6E7CC /* AppDelegate.swift */,
+				CC40FE2C29A1560200E6E7CC /* SceneDelegate.swift */,
+				CC4CC65B29A16428006ECDD9 /* Models */,
+				CC4CC65C29A16434006ECDD9 /* Views */,
+				CC4CC65929A16409006ECDD9 /* Controllers */,
+				CC40FE3329A1560400E6E7CC /* Assets.xcassets */,
+				CC40FE3529A1560400E6E7CC /* LaunchScreen.storyboard */,
+				CC40FE3829A1560400E6E7CC /* Info.plist */,
+			);
+			path = quizzy;
+			sourceTree = "<group>";
+		};
+		CC4CC65929A16409006ECDD9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC40FE2E29A1560200E6E7CC /* ViewController.swift */,
+				CC4CC65D29A1645F006ECDD9 /* OptionCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CC4CC65B29A16428006ECDD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC40FE3E29A1578900E6E7CC /* QuestionData.swift */,
+				CC4CC65729A15BF2006ECDD9 /* QuestionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC4CC65C29A16434006ECDD9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC40FE3029A1560200E6E7CC /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D108A5CA25248452B1310375 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61D0DFD907540612F89E95DC /* Pods_quizzy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC40FE2629A1560200E6E7CC /* quizzy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC40FE3B29A1560400E6E7CC /* Build configuration list for PBXNativeTarget "quizzy" */;
+			buildPhases = (
+				0F52A016C4E0857AE02511B6 /* [CP] Check Pods Manifest.lock */,
+				CC40FE2329A1560200E6E7CC /* Sources */,
+				CC40FE2429A1560200E6E7CC /* Frameworks */,
+				CC40FE2529A1560200E6E7CC /* Resources */,
+				49242254BCC51F998D072BE5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = quizzy;
+			productName = quizzy;
+			productReference = CC40FE2729A1560200E6E7CC /* quizzy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC40FE1F29A1560200E6E7CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CC40FE2629A1560200E6E7CC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = CC40FE2229A1560200E6E7CC /* Build configuration list for PBXProject "quizzy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC40FE1E29A1560200E6E7CC;
+			productRefGroup = CC40FE2829A1560200E6E7CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC40FE2629A1560200E6E7CC /* quizzy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC40FE2529A1560200E6E7CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC40FE3729A1560400E6E7CC /* LaunchScreen.storyboard in Resources */,
+				CC40FE3429A1560400E6E7CC /* Assets.xcassets in Resources */,
+				CC40FE3229A1560200E6E7CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F52A016C4E0857AE02511B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quizzy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49242254BCC51F998D072BE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quizzy/Pods-quizzy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quizzy/Pods-quizzy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quizzy/Pods-quizzy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC40FE2329A1560200E6E7CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC40FE2F29A1560200E6E7CC /* ViewController.swift in Sources */,
+				CC40FE2B29A1560200E6E7CC /* AppDelegate.swift in Sources */,
+				CC4CC65E29A1645F006ECDD9 /* OptionCell.swift in Sources */,
+				CC40FE2D29A1560200E6E7CC /* SceneDelegate.swift in Sources */,
+				CC40FE3F29A1578900E6E7CC /* QuestionData.swift in Sources */,
+				CC4CC65829A15BF2006ECDD9 /* QuestionModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CC40FE3029A1560200E6E7CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC40FE3129A1560200E6E7CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC40FE3529A1560400E6E7CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC40FE3629A1560400E6E7CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC40FE3929A1560400E6E7CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC40FE3A29A1560400E6E7CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC40FE3C29A1560400E6E7CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD6DA40CBA7C88B3206FD7E1 /* Pods-quizzy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = quizzy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = d.ibrokhimov.quizzy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC40FE3D29A1560400E6E7CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 808FF90882A1A995FE7F509E /* Pods-quizzy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = quizzy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = d.ibrokhimov.quizzy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC40FE2229A1560200E6E7CC /* Build configuration list for PBXProject "quizzy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC40FE3929A1560400E6E7CC /* Debug */,
+				CC40FE3A29A1560400E6E7CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC40FE3B29A1560400E6E7CC /* Build configuration list for PBXNativeTarget "quizzy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC40FE3C29A1560400E6E7CC /* Debug */,
+				CC40FE3D29A1560400E6E7CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC40FE1F29A1560200E6E7CC /* Project object */;
+}
