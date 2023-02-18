@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var questionNumber = 0
     var allOptions: [String] = []
     var questionDataJSON = JSON()
+    var correctAnswerIndex = Int()
     
     //MARK: - Instances
     var questionData = QuestionData()
@@ -32,12 +33,13 @@ class ViewController: UIViewController {
     //MARK: - Actions
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         allOptions = []
-        
         questionNumber += 1
         if questionNumber > 9 {
             return
         }
+        
         updateQuestionData()
+        
     }
 }
 
@@ -56,8 +58,8 @@ extension ViewController {
     }
     
     func updateQuestionData() {
-        var question: String = ""
-        var correctAnswer: String = ""
+        var question: String
+        var correctAnswer: String
         
         question = questionDataJSON["results"][questionNumber]["question"].stringValue
         correctAnswer = questionDataJSON["results"][questionNumber]["correct_answer"].stringValue
@@ -68,6 +70,8 @@ extension ViewController {
             allOptions.append(option)
         }
         
+        allOptions.shuffle()
+        correctAnswerIndex = allOptions.firstIndex(of: correctAnswer)!
         optionsTableView.reloadData()
         updateUI(question: question)
         
@@ -95,7 +99,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setOption(option: option)
         return cell
     }
-
 }
 
 
