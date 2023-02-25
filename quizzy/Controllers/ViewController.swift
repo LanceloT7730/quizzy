@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     var allOptions: [String] = []
     var questionDataJSON = JSON()
     var correctAnswerIndex = Int()
-    
+    var hasMadeSelection = false
+    var shouldBeCleared = false
     //MARK: - Instances
     var questionData = QuestionData()
     
@@ -37,9 +38,9 @@ class ViewController: UIViewController {
         if questionNumber > 9 {
             return
         }
-        
         updateQuestionData()
-        
+        hasMadeSelection = false
+        shouldBeCleared = true
     }
 }
 
@@ -97,7 +98,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OptionCell") as! OptionCell
         
         cell.setOption(option: option)
+        
+        if shouldBeCleared {
+            cell.backgroundColor = .white
+        }
+        
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if !hasMadeSelection {
+            if correctAnswerIndex == indexPath.row {
+                tableView.cellForRow(at: indexPath)?.backgroundColor = .systemGreen
+                
+            } else {
+                tableView.cellForRow(at: indexPath)?.backgroundColor = .systemRed
+            }
+            hasMadeSelection = true
+        }
     }
 }
 
