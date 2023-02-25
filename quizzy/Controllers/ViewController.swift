@@ -2,11 +2,24 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+extension String {
+    var htmlDecoded: String {
+        guard let data = data(using: .utf8) else { return self }
+        do {
+            return try NSAttributedString(data: data,
+                                          options: [.documentType: NSAttributedString.DocumentType.html,
+                                                    .characterEncoding: String.Encoding.utf8.rawValue],
+                                          documentAttributes: nil).string
+        } catch {
+            return self
+        }
+    }
+}
+
 class ViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var optionsTableView: UITableView!
-    @IBOutlet weak var nextButton: UIButton!
     
     
     //MARK: - Public and Static variables
@@ -16,31 +29,39 @@ class ViewController: UIViewController {
     var correctAnswerIndex = Int()
     var hasMadeSelection = false
     var shouldBeCleared = false
-    //MARK: - Instances
-    var questionData = QuestionData()
+    
+    var isResetPressed = false
     
     let questionUrl = "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         optionsTableView.delegate = self
         optionsTableView.dataSource = self
-        
         getQuestionData()
         
     }
     
     //MARK: - Actions
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        allOptions = []
+        allOptions.removeAll()
         questionNumber += 1
         if questionNumber > 9 {
+            print("questionNumber reached the limit")
             return
         }
         updateQuestionData()
         hasMadeSelection = false
         shouldBeCleared = true
+    }
+    
+    
+    @IBAction func ResetButtonPressed(_ sender: UIButton) {
+        print("ResetButtonPressed")
+        allOptions.removeAll()
+        questionNumber = 0
+        isResetPressed = true
+        getQuestionData()
     }
 }
 
@@ -51,7 +72,9 @@ extension ViewController {
             switch response.result {
             case .success(let safeResult):
                 self.questionDataJSON = JSON(safeResult)
-                self.updateQuestionData()
+                if !self.isResetPressed{
+                    self.updateQuestionData()
+                }
             case.failure(let error):
                 print(error)
             }
@@ -62,12 +85,12 @@ extension ViewController {
         var question: String
         var correctAnswer: String
         
-        question = questionDataJSON["results"][questionNumber]["question"].stringValue
-        correctAnswer = questionDataJSON["results"][questionNumber]["correct_answer"].stringValue
+        question = questionDataJSON["results"][questionNumber]["question"].stringValue.htmlDecoded
+        correctAnswer = questionDataJSON["results"][questionNumber]["correct_answer"].stringValue.htmlDecoded
         allOptions.append(correctAnswer)
         
         for j in 0...2 {
-            let option = questionDataJSON["results"][questionNumber]["incorrect_answers"][j].stringValue
+            let option = questionDataJSON["results"][questionNumber]["incorrect_answers"][j].stringValue.htmlDecoded
             allOptions.append(option)
         }
         
@@ -77,7 +100,7 @@ extension ViewController {
         updateUI(question: question)
         
     }
-
+    
     //MARK: - Update UI
     func updateUI(question: String) {
         questionLabel.text = question
@@ -88,11 +111,13 @@ extension ViewController {
 //MARK: - TableView
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("numberOfRowsInSection")
         return allOptions.count
+        
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         let option = allOptions[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "OptionCell") as! OptionCell
@@ -102,6 +127,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if shouldBeCleared {
             cell.backgroundColor = .white
         }
+        print("cellForRowAt")
         
         return cell
     }
@@ -118,7 +144,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
             hasMadeSelection = true
         }
+        print("didSelectRowAt")
     }
+    
+    
 }
 
 

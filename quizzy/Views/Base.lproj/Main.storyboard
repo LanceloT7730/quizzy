@@ -58,31 +58,45 @@
                                     </tableView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2B-tk-W4K">
-                                <rect key="frame" x="166.66666666666666" y="778" width="59.666666666666657" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Qvc-c3-FAL"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                <connections>
-                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9V-L3-YLM"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="242" translatesAutoresizingMaskIntoConstraints="NO" id="bOs-MA-HYi" userLabel="Button Stacks">
+                                <rect key="frame" x="0.0" y="778" width="393" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewn-Go-Qzi" userLabel="Reset">
+                                        <rect key="frame" x="0.0" y="0.0" width="75.666666666666671" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                        <connections>
+                                            <action selector="ResetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9v-gi-tb9"/>
+                                            <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nGr-7a-NeZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2B-tk-W4K">
+                                        <rect key="frame" x="317.66666666666669" y="0.0" width="75.333333333333314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Qvc-c3-FAL"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9V-L3-YLM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="u2F-FR-m4n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3OE-0Y-GbQ"/>
-                            <constraint firstItem="G2B-tk-W4K" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EE0-75-qJY"/>
+                            <constraint firstItem="bOs-MA-HYi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Da0-R1-BeQ"/>
                             <constraint firstItem="u2F-FR-m4n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Sbf-AS-UEF"/>
-                            <constraint firstItem="G2B-tk-W4K" firstAttribute="top" secondItem="u2F-FR-m4n" secondAttribute="bottom" id="iIR-eH-tyA"/>
-                            <constraint firstItem="G2B-tk-W4K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mrU-Ff-L7D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bOs-MA-HYi" secondAttribute="trailing" id="nLi-DR-2Xp"/>
+                            <constraint firstItem="bOs-MA-HYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pfp-fP-A1f"/>
                             <constraint firstItem="u2F-FR-m4n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tkb-gU-731"/>
+                            <constraint firstItem="bOs-MA-HYi" firstAttribute="top" secondItem="u2F-FR-m4n" secondAttribute="bottom" id="trC-De-nTm"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nextButton" destination="G2B-tk-W4K" id="HBQ-0H-REI"/>
                         <outlet property="optionsTableView" destination="RNA-HV-KUR" id="zgI-ge-yKp"/>
                         <outlet property="questionLabel" destination="Mwr-rj-t2p" id="79y-tx-FiG"/>
                     </connections>
