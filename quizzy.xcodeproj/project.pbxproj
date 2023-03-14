@@ -14,8 +14,6 @@
 		CC40FE3229A1560200E6E7CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC40FE3029A1560200E6E7CC /* Main.storyboard */; };
 		CC40FE3429A1560400E6E7CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC40FE3329A1560400E6E7CC /* Assets.xcassets */; };
 		CC40FE3729A1560400E6E7CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC40FE3529A1560400E6E7CC /* LaunchScreen.storyboard */; };
-		CC40FE3F29A1578900E6E7CC /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC40FE3E29A1578900E6E7CC /* QuestionData.swift */; };
-		CC4CC65829A15BF2006ECDD9 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CC65729A15BF2006ECDD9 /* QuestionModel.swift */; };
 		CC4CC65E29A1645F006ECDD9 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CC65D29A1645F006ECDD9 /* OptionCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +29,6 @@
 		CC40FE3329A1560400E6E7CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC40FE3629A1560400E6E7CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC40FE3829A1560400E6E7CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC40FE3E29A1578900E6E7CC /* QuestionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
-		CC4CC65729A15BF2006ECDD9 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		CC4CC65D29A1645F006ECDD9 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,40 +76,14 @@
 			children = (
 				CC40FE2A29A1560200E6E7CC /* AppDelegate.swift */,
 				CC40FE2C29A1560200E6E7CC /* SceneDelegate.swift */,
-				CC4CC65B29A16428006ECDD9 /* Models */,
-				CC4CC65C29A16434006ECDD9 /* Views */,
-				CC4CC65929A16409006ECDD9 /* Controllers */,
+				CC40FE3029A1560200E6E7CC /* Main.storyboard */,
+				CC40FE2E29A1560200E6E7CC /* ViewController.swift */,
+				CC4CC65D29A1645F006ECDD9 /* OptionCell.swift */,
 				CC40FE3329A1560400E6E7CC /* Assets.xcassets */,
 				CC40FE3529A1560400E6E7CC /* LaunchScreen.storyboard */,
 				CC40FE3829A1560400E6E7CC /* Info.plist */,
 			);
 			path = quizzy;
-			sourceTree = "<group>";
-		};
-		CC4CC65929A16409006ECDD9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CC40FE2E29A1560200E6E7CC /* ViewController.swift */,
-				CC4CC65D29A1645F006ECDD9 /* OptionCell.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		CC4CC65B29A16428006ECDD9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CC40FE3E29A1578900E6E7CC /* QuestionData.swift */,
-				CC4CC65729A15BF2006ECDD9 /* QuestionModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CC4CC65C29A16434006ECDD9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CC40FE3029A1560200E6E7CC /* Main.storyboard */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		D108A5CA25248452B1310375 /* Frameworks */ = {
@@ -243,8 +213,6 @@
 				CC40FE2B29A1560200E6E7CC /* AppDelegate.swift in Sources */,
 				CC4CC65E29A1645F006ECDD9 /* OptionCell.swift in Sources */,
 				CC40FE2D29A1560200E6E7CC /* SceneDelegate.swift in Sources */,
-				CC40FE3F29A1578900E6E7CC /* QuestionData.swift in Sources */,
-				CC4CC65829A15BF2006ECDD9 /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

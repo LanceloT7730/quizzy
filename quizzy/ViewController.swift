@@ -72,7 +72,8 @@ extension ViewController {
             switch response.result {
             case .success(let safeResult):
                 self.questionDataJSON = JSON(safeResult)
-                if !self.isResetPressed{
+                
+                if !self.isResetPressed { // not important at the beginning
                     self.updateQuestionData()
                 }
             case.failure(let error):
@@ -97,12 +98,12 @@ extension ViewController {
         allOptions.shuffle()
         correctAnswerIndex = allOptions.firstIndex(of: correctAnswer)!
         optionsTableView.reloadData()
-        updateUI(question: question)
+        updateUI(with: question)
         
     }
     
     //MARK: - Update UI
-    func updateUI(question: String) {
+    func updateUI(with question: String) {
         questionLabel.text = question
     }
     
@@ -124,16 +125,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.setOption(option: option)
         
-        if shouldBeCleared {
+        if shouldBeCleared { // not important
             cell.backgroundColor = .white
         }
-        print("cellForRowAt")
+        print("cellForRowAt") // not important
         
         return cell
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { // not important
         
         if !hasMadeSelection {
             if correctAnswerIndex == indexPath.row {
