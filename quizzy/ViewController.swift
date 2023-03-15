@@ -27,8 +27,8 @@ class ViewController: UIViewController {
     var allOptions: [String] = []
     var questionDataJSON = JSON()
     var correctAnswerIndex = Int()
-    var hasMadeSelection = false
-    var shouldBeCleared = false
+    var hasMadeSelection = false // not important
+    var shouldBeCleared = false // not important
     
     var isResetPressed = false
     
